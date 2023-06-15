@@ -17,7 +17,14 @@ export default function SearChBox() {
     [inputValue],
   );
 
-  console.log(inputValue);
+  const onSubmit = useCallback(() => {
+    if (
+      inputValue.length > 0 &&
+      Sports.filter((a) => a.name.includes(inputValue)).length > 0
+    ) {
+      console.log(inputValue);
+    }
+  }, [inputValue]);
 
   return (
     <>
@@ -26,6 +33,7 @@ export default function SearChBox() {
         <SSearch
           value={inputValue}
           onChange={onChange}
+          onSearch={onSubmit}
           size="large"
           placeholder="원하는 스포츠를 입력해보세요."
         />
