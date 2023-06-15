@@ -1,15 +1,12 @@
 import TopMenu from 'components/TopMenu';
 import styled from 'styled-components';
 import { useCallback, useState } from 'react';
-import { Input } from 'antd';
 import { Carousel } from 'antd';
-import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons';
+
 import basketball from 'assets/img/basketball.jpg';
 import soccer from 'assets/img/soccer.jpg';
 import baseball from 'assets/img/baseball.png';
-
-const { Search } = Input;
-const onSearch = (value: string) => console.log(value);
+import SearChBox from 'components/SearchBox';
 
 export default function Main() {
   return (
@@ -30,14 +27,7 @@ export default function Main() {
           </SCarousel>
         </Slider>
       </Header>
-      <SearchBox>
-        <div>스크루에서 다양한 사람들과 교류하세요!</div>
-        <SSearch
-          placeholder="원하는 스포츠를 입력해보세요."
-          onSearch={onSearch}
-          size="large"
-        />
-      </SearchBox>
+      <SearChBox />
     </Content>
   );
 }
@@ -76,22 +66,4 @@ const SCarousel = styled(Carousel)`
 const SImg = styled.img`
   width: 1300px;
   height: 300px;
-`;
-
-const SearchBox = styled.div`
-  margin-top: 20px;
-  width: 40%;
-  height: 100px;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-
-const SSearch = styled(Search)`
-  width: 100%;
-  margin-top: 15px;
 `;

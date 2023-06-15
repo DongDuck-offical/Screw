@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Logo from 'assets/img/logo.jpg';
 import { styled } from 'styled-components';
 
-export default function topmenu() {
+export default function Topmenu() {
   return (
     <Content>
       <SLink to={'/'}>
