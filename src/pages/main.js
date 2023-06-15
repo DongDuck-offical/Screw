@@ -28,6 +28,24 @@ export default function Main() {
         </Slider>
       </Header>
       <SearChBox />
+      <BestSportBox>
+        <BestTitle>⭐ Top 10 Sports ⭐</BestTitle>
+        <SportBox>
+          <SportKind>
+            <div>⚽</div>
+            <div>축구</div>
+          </SportKind>
+          <SportKind>축구</SportKind>
+          <SportKind>축구</SportKind>
+          <SportKind>축구</SportKind>
+          <SportKind>축구</SportKind>
+          <SportKind>축구</SportKind>
+          <SportKind>축구</SportKind>
+          <SportKind>축구</SportKind>
+          <SportKind>축구</SportKind>
+          <SportKind>축구</SportKind>
+        </SportBox>
+      </BestSportBox>
     </Content>
   );
 }
@@ -66,4 +84,36 @@ const SCarousel = styled(Carousel)`
 const SImg = styled.img`
   width: 1300px;
   height: 300px;
+`;
+
+const BestSportBox = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+`;
+
+const BestTitle = styled.p`
+  width: 100%;
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+`;
+
+const SportBox = styled.div`
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+`;
+
+const SportKind = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 250px;
+  border: 1px solid red;
 `;

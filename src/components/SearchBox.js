@@ -27,36 +27,34 @@ export default function SearChBox() {
   }, [inputValue]);
 
   return (
-    <>
-      <SearchBox>
-        <Title>스크루에서 다양한 사람들과 교류하세요!</Title>
-        <SSearch
-          value={inputValue}
-          onChange={onChange}
-          onSearch={onSubmit}
-          size="large"
-          placeholder="원하는 스포츠를 입력해보세요."
-        />
-        {inputValue && (
-          <HideBox>
-            {SearchSport.length > 0 ? (
-              SearchSport.map((a) => (
-                <HideItem
-                  key={a.id}
-                  onClick={() => {
-                    setInputValue(a.name);
-                  }}
-                >
-                  {a.name}
-                </HideItem>
-              ))
-            ) : (
-              <NoItem>아직 개설이 안된 스포츠에요!... 😶</NoItem>
-            )}
-          </HideBox>
-        )}
-      </SearchBox>
-    </>
+    <SearchBox>
+      <Title>스크루에서 다양한 사람들과 교류하세요!</Title>
+      <SSearch
+        value={inputValue}
+        onChange={onChange}
+        onSearch={onSubmit}
+        size="large"
+        placeholder="원하는 스포츠를 입력해보세요."
+      />
+      {inputValue && (
+        <HideBox>
+          {SearchSport.length > 0 ? (
+            SearchSport.map((a) => (
+              <HideItem
+                key={a.id}
+                onClick={() => {
+                  setInputValue(a.name);
+                }}
+              >
+                {a.name}
+              </HideItem>
+            ))
+          ) : (
+            <NoItem>아직 개설이 안된 스포츠에요!... 😶</NoItem>
+          )}
+        </HideBox>
+      )}
+    </SearchBox>
   );
 }
 
@@ -69,6 +67,7 @@ const SearchBox = styled.div`
   position: relative;
   margin-top: 40px;
   width: 40%;
+  height: 200px;
   min-width: 400px;
   display: flex;
   justify-content: center;
