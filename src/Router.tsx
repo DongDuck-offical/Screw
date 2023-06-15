@@ -1,23 +1,26 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 
-import Root from "./Root";
-import Main from "./pages/main";
-import SignUp from "./pages/signUp";
+import Root from './Root';
+import Main from './pages/main';
+import SignUp from './pages/signUp';
+import NotFound from './pages/ErrorPage/NotFound';
 
 const Router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root />,
     children: [
       {
-        path: "",
+        path: '',
         element: <Main />,
+        errorElement: <NotFound />,
       },
       {
-        path: "/signup",
+        path: '/signup',
         element: <SignUp />,
       },
     ],
+    errorElement: <NotFound />,
   },
 ]);
 
