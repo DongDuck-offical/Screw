@@ -4,7 +4,7 @@ export const Sports = [
     id: 1,
   },
   {
-    name: '축살',
+    name: '풋살',
     id: 2,
   },
   {
@@ -16,7 +16,7 @@ export const Sports = [
     id: 4,
   },
   {
-    name: '족구',
+    name: '볼링',
     id: 5,
   },
   {
@@ -60,7 +60,7 @@ export const Sports = [
     id: 15,
   },
   {
-    name: '보드',
+    name: '러닝',
     id: 16,
   },
 ];

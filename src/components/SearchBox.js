@@ -68,7 +68,7 @@ const SearchBox = styled.div`
   margin-top: 40px;
   width: 40%;
   height: 200px;
-  min-width: 400px;
+  min-width: 470px;
   display: flex;
   justify-content: center;
   align-items: center;

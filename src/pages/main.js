@@ -1,14 +1,17 @@
 import TopMenu from 'components/TopMenu';
 import styled from 'styled-components';
 import { useCallback, useState } from 'react';
-import { Carousel } from 'antd';
+import { Carousel, Card } from 'antd';
 
 import basketball from 'assets/img/basketball.jpg';
 import soccer from 'assets/img/soccer.jpg';
 import baseball from 'assets/img/baseball.png';
 import SearChBox from 'components/SearchBox';
+import BestSport from 'components/BestSport';
 
 export default function Main() {
+  let now = new Date();
+
   return (
     <Content>
       <TopMenu />
@@ -29,23 +32,24 @@ export default function Main() {
       </Header>
       <SearChBox />
       <BestSportBox>
-        <BestTitle>⭐ Top 10 Sports ⭐</BestTitle>
+        <BestTitle>⭐ {now.getMonth() + 1}월 인기 스포츠 ⭐</BestTitle>
         <SportBox>
-          <SportKind>
-            <div>⚽</div>
-            <div>축구</div>
-          </SportKind>
-          <SportKind>축구</SportKind>
-          <SportKind>축구</SportKind>
-          <SportKind>축구</SportKind>
-          <SportKind>축구</SportKind>
-          <SportKind>축구</SportKind>
-          <SportKind>축구</SportKind>
-          <SportKind>축구</SportKind>
-          <SportKind>축구</SportKind>
-          <SportKind>축구</SportKind>
+          <BestSport id="3" icon="🏀" name="농구" number="110" />
+          <BestSport id="2" icon="⚽" name="풋살" number="90" />
+          <BestSport id="16" icon="🏃‍♀️" name="러닝" number="200" />
+          <BestSport id="6" icon="🥎" name="테니스" number="110" />
+        </SportBox>
+        <SportBox>
+          <BestSport id="5" icon="🎳" name="볼링" number="170" />
+          <BestSport id="14" icon="🏊‍♀️" name="수영" number="80" />
+          <BestSport id="11" icon="🏓" name="탁구" number="80" />
+          <BestSport id="4" icon="⚾" name="야구" number="70" />
         </SportBox>
       </BestSportBox>
+      <Recommend>
+        <div>OO님께 추천드리는 모임</div>
+      </Recommend>
+      <Footer></Footer>
     </Content>
   );
 }
@@ -89,31 +93,32 @@ const SImg = styled.img`
 const BestSportBox = styled.div`
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
 `;
 
 const BestTitle = styled.p`
   width: 100%;
-  font-family: 'Anton', sans-serif;
-  font-size: 40px;
-  font-weight: bolder;
+  font-weight: 600;
+  font-size: 35px;
   text-align: center;
 `;
 
 const SportBox = styled.div`
-  width: 80%;
-  margin-top: 20px;
+  width: 50%;
+  min-width: 420px;
+  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   justify-content: space-between;
 `;
 
-const SportKind = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  width: 250px;
-  border: 1px solid red;
+const Recommend = styled.div`
+  width: 100%;
+`;
+
+const Footer = styled.div`
+  width: 100%;
 `;
