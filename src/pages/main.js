@@ -8,6 +8,7 @@ import soccer from 'assets/img/soccer.jpg';
 import baseball from 'assets/img/baseball.png';
 import SearChBox from 'components/SearchBox';
 import BestSport from 'components/BestSport';
+import Group from 'components/Group';
 
 export default function Main() {
   let now = new Date();
@@ -46,9 +47,17 @@ export default function Main() {
           <BestSport id="4" icon="⚾" name="야구" number="70" />
         </SportBox>
       </BestSportBox>
-      <Recommend>
-        <div>OO님께 추천드리는 모임</div>
-      </Recommend>
+      <RecommendBox>
+        <RecommendTitle>OO님께 추천드리는 모임</RecommendTitle>
+        <Group id="1" title="붐테니스" region="서초구" like="30" sport="댄스" />
+        <Group id="2" />
+        <Group id="3" />
+        <Group id="4" />
+        <Group id="5" />
+        <Group id="6" />
+        <Group id="7" />
+        <Group id="8" />
+      </RecommendBox>
       <Footer></Footer>
     </Content>
   );
@@ -115,8 +124,20 @@ const SportBox = styled.div`
   justify-content: space-between;
 `;
 
-const Recommend = styled.div`
+const RecommendBox = styled.div`
+  width: 50%;
+  min-width: 420px;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+`;
+
+const RecommendTitle = styled.p`
   width: 100%;
+  font-weight: 550;
+  font-size: 25px;
 `;
 
 const Footer = styled.div`
