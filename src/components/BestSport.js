@@ -7,28 +7,30 @@ export default function BestSport({ id, icon, name, number }) {
     <Content onClick={() => navigate(`sports/${id}`)}>
       <Icon>{icon}</Icon>
       <Title>{name}</Title>
-      <SubTitle>{number} 명</SubTitle>
+      <SubTitle>{number}+ 개의 모임</SubTitle>
     </Content>
   );
 }
 
 const Content = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-  width: 100px;
-  height: 100px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
-  background-color: whitesmoke;
+  background-color: #fafafa;
   cursor: pointer;
   &:hover {
     transition: all 0.4s linear;
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
   box-shadow: 0 5px 5px rgb(0, 0, 0, 0.3);
 `;
 
 const Icon = styled.p`
-  margin-top: 8px;
   font-size: 30px;
 `;
 
@@ -38,6 +40,14 @@ const Title = styled.p`
 `;
 
 const SubTitle = styled.p`
-  margin-top: 3px;
+  padding: 0 5px;
+  margin-top: 5px;
   font-size: 10px;
+  font-weight: bolder;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: #f8bbd0;
 `;

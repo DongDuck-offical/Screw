@@ -34,7 +34,7 @@ export default function Main() {
       </Header>
       <SearChBox />
       <BestSportBox>
-        <BestTitle>⭐ {now.getMonth() + 1}월 인기 스포츠 ⭐</BestTitle>
+        <BestTitle> {now.getMonth() + 1}월 인기 스포츠 </BestTitle>
         <SportBox>
           <BestSport id="3" icon="🏀" name="농구" number="110" />
           <BestSport id="2" icon="⚽" name="풋살" number="90" />
@@ -50,6 +50,17 @@ export default function Main() {
       </BestSportBox>
       <RecommendBox>
         <RecommendTitle>OO님께 추천드리는 모임</RecommendTitle>
+        <Group id="1" title="붐테니스" region="서초구" like="30" sport="댄스" />
+        <Group id="2" />
+        <Group id="3" />
+        <Group id="4" />
+        <Group id="5" />
+        <Group id="6" />
+        <Group id="7" />
+        <Group id="8" />
+      </RecommendBox>
+      <RecommendBox>
+        <RecommendTitle>따끈따끈, 신규모임을 만나보세요! 🙋🏻‍♀️</RecommendTitle>
         <Group id="1" title="붐테니스" region="서초구" like="30" sport="댄스" />
         <Group id="2" />
         <Group id="3" />
@@ -115,24 +126,29 @@ const SImg = styled.img`
 `;
 
 const BestSportBox = styled.div`
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  min-width: 600px;
+  background-color: aliceblue;
 `;
 
 const BestTitle = styled.p`
   width: 100%;
-  font-weight: 600;
-  font-size: 35px;
+  font-family: 'Gasoek One', sans-serif;
+  font-size: 50px;
   text-align: center;
+  color: #90caf9;
+  text-shadow: 3px 3px 5px grey;
 `;
 
 const SportBox = styled.div`
   width: 50%;
   min-width: 420px;
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -142,7 +158,7 @@ const SportBox = styled.div`
 const RecommendBox = styled.div`
   width: 50%;
   min-width: 420px;
-  margin-top: 80px;
+  margin-top: 70px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

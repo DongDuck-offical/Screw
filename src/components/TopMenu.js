@@ -18,7 +18,11 @@ export default function Topmenu() {
 }
 
 const Content = styled.div`
-  background-color: #f9f5f6;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 3px 3px rgb(0, 0, 0, 0.2);
   width: 100%;
   height: 50px;
   display: flex;
@@ -44,8 +48,11 @@ const SImg = styled.img`
 `;
 
 const UserBox = styled.div`
-  width: 150px;
+  width: 135px;
+  font-size: 15px;
   display: flex;
+  color: black;
+  font-weight: bolder;
   justify-content: center;
   justify-content: space-between;
 `;
