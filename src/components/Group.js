@@ -18,10 +18,14 @@ export default function Group({ id, title, region, like, sport }) {
 }
 
 const Content = styled.div`
+  padding-bottom: 5px;
   margin-top: 40px;
   width: 200px;
   height: 230px;
   cursor: pointer;
+  &:hover {
+    background-color: #eeeeee;
+  }
 `;
 
 const Img = styled.img`

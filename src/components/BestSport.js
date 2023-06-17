@@ -33,11 +33,11 @@ const Icon = styled.p`
 `;
 
 const Title = styled.p`
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bolder;
 `;
 
 const SubTitle = styled.p`
-  margin-top: 5px;
+  margin-top: 3px;
   font-size: 10px;
 `;

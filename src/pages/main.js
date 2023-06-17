@@ -1,14 +1,15 @@
 import TopMenu from 'components/TopMenu';
 import styled from 'styled-components';
 import { useCallback, useState } from 'react';
-import { Carousel, Card } from 'antd';
-
-import basketball from 'assets/img/basketball.jpg';
-import soccer from 'assets/img/soccer.jpg';
-import baseball from 'assets/img/baseball.png';
+import { Carousel } from 'antd';
 import SearChBox from 'components/SearchBox';
 import BestSport from 'components/BestSport';
 import Group from 'components/Group';
+import basketball from 'assets/img/basketball.jpg';
+import soccer from 'assets/img/soccer.jpg';
+import baseball from 'assets/img/baseball.png';
+import github from 'assets/img/github.png';
+import notion from 'assets/img/notion.png';
 
 export default function Main() {
   let now = new Date();
@@ -58,7 +59,21 @@ export default function Main() {
         <Group id="7" />
         <Group id="8" />
       </RecommendBox>
-      <Footer></Footer>
+      <Footer>
+        <FooterTitle>Screw</FooterTitle>
+        <FooterTitle2>©2023 DongDuck.ALL RIGHTS RESERVED</FooterTitle2>
+        <FooterLink>
+          <a target="blank" href="https://github.com/DongDuck-offical">
+            <SImg2 src={github} alt={'github'} />
+          </a>
+          <a
+            target="blank"
+            href="https://www.notion.so/f4ed22a4e12a4c8f81e87aa7fd806bc4?pvs=4l"
+          >
+            <SImg2 src={notion} alt={'notion'} />
+          </a>
+        </FooterLink>
+      </Footer>
     </Content>
   );
 }
@@ -141,5 +156,41 @@ const RecommendTitle = styled.p`
 `;
 
 const Footer = styled.div`
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  color: white;
   width: 100%;
+  background-color: #424242;
+`;
+
+const FooterTitle = styled.p`
+  width: 100%;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+`;
+
+const FooterTitle2 = styled.p`
+  margin-top: 6px;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+`;
+
+const FooterLink = styled.div`
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  width: 80px;
+  font-size: 12px;
+  text-align: center;
+`;
+
+const SImg2 = styled.img`
+  width: 30px;
+  height: 30px;
 `;

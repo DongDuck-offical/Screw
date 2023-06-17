@@ -28,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
         display: block;
     }
     body {
-        line-height: 1;
         font-family: 'Noto Sans KR', sans-serif;
         overflow-x: hidden;
     }
