@@ -15,9 +15,14 @@ const antIcon = (
 
 export default function KakaoLogin() {
   const code = new URL(document.location.toString()).searchParams.get('code');
+  console.log(code);
   useEffect(() => {
-    console.log(code);
-  }, [code]);
+    axios
+      .post(`http://localhost:8081/login/oauth2/code/kakao?${code}`)
+      .then((r) => {
+        console.log(r.data);
+      });
+  }, []);
 
   return (
     <Container>
