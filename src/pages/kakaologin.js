@@ -8,6 +8,7 @@ const antIcon = (
   <LoadingOutlined
     style={{
       fontSize: 100,
+      marginBottom: 30,
     }}
     spin
   />
@@ -18,15 +19,18 @@ export default function KakaoLogin() {
   console.log(code);
   useEffect(() => {
     axios
-      .post(`http://localhost:8081/login/oauth2/code/kakao?${code}`)
-      .then((r) => {
-        console.log(r.data);
+      .get(`http://localhost:8081/login/oauth2/code/kakao?${code}`)
+      .then((response) => {
+        console.log(response.data);
       });
   }, []);
 
   return (
     <Container>
-      <Spin indicator={antIcon} />
+      <Content>
+        <Spin indicator={antIcon} />
+        <div>로그인중...</div>
+      </Content>
     </Container>
   );
 }
@@ -37,4 +41,8 @@ const Container = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100vh;
+`;
+
+const Content = styled.div`
+  text-align: center;
 `;
