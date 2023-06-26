@@ -3,6 +3,8 @@ import Logo from 'assets/img/logo.jpg';
 import { styled } from 'styled-components';
 
 export default function Topmenu() {
+  const REST_API_KEY = 'c4957dae238f06a38023a0dc6d8a3470';
+  const REDIRECT_URI = 'http://localhost:3000/kakaologin';
   return (
     <Content>
       <SLink to={'/'}>
@@ -10,7 +12,11 @@ export default function Topmenu() {
         SCrew
       </SLink>
       <UserBox>
-        <div>로그인</div>
+        <a
+          href={`https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}`}
+        >
+          로그인
+        </a>
         <div>회원가입</div>
       </UserBox>
     </Content>

@@ -156,7 +156,7 @@ const SportBox = styled.div`
 `;
 
 const RecommendBox = styled.div`
-  width: 50%;
+  width: 900px;
   min-width: 420px;
   margin-top: 70px;
   display: flex;
